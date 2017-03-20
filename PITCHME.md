@@ -2,7 +2,9 @@
 #### Introduction & Application
 ---
 ###What Is TDD?
-####TDD is continual testing, coding, design and documentation.
+####More than "writing tests first"...
++++
+TDD is continual testing, coding, design and documentation.
 ####In a nutshell:
   1. Write a test.
   2. Run all tests. The test should fail.
@@ -11,10 +13,10 @@
   5. Refactor your code - optional.
   
 ---
-Red, Green & Refactor
+![Image-Absolute](https://s3.amazonaws.com/media-p.slid.es/uploads/jlopezmo/images/587930/tdd-circle-of-life.png)
 ---
 Why Do We Use TDD?
-
+TDD is continual testing, coding, design and documentation.
 ---
 ####Testing Best Practices:
 +++
