@@ -12,8 +12,14 @@ TDD is continual testing, coding, design and documentation.
   4. Run all tests. They should pass.
   5. Refactor your code - optional.
   
----
++++
 ![Image-Absolute](https://s3.amazonaws.com/media-p.slid.es/uploads/jlopezmo/images/587930/tdd-circle-of-life.png)
++++
+####Uncle Bob's Three Laws of TDD:<br>
+1. You can't write any production code until you have first written a failing unit test.<br>
+2. You can't write more of a unit test than is sufficient to fail, and not compiling is failing.<br>
+3. You can't write more production code than is sufficient to pass the currently failing unit test<br>
+[Credit to Robert C. Martin](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob)
 ---
 Why Do We Use TDD?
 TDD is continual testing, coding, design and documentation.
@@ -66,9 +72,4 @@ public void completeMeritBadge_completedAndScoutMasterSet {
 +++
   #####Design from the outside in. Design based on need.
 ---
-#HSLIDE
-Uncle Bob's Three Laws of TDD:<br>
-1. You can't write any production code until you have first written a failing unit test.<br>
-2. You can't write more of a unit test than is sufficient to fail, and not compiling is failing.<br>
-3. You can't write more production code than is sufficient to pass the currently failing unit test<br>
-[Credit to Robert C. Martin](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob)
+
