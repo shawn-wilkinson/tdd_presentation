@@ -4,7 +4,6 @@
 ###What Is TDD?
 ####More than "writing tests first"...
 +++
-TDD is continual testing, coding, design and documentation.
 ####In a nutshell:
   1. Write a test.
   2. Run all tests. The test should fail.
@@ -23,6 +22,18 @@ TDD is continual testing, coding, design and documentation.
 ---
 Why Do We Use TDD?
 TDD is continual testing, coding, design and documentation.
+---
+####The Hard Part
+#####Testing something that doesn't exist
+![Image-Relative](http://media1.iterated-reality.com/2015/03/ChickenOrEgg.jpg)
++++
+1. Inputs and Outputs
+2. Function Signature
+3. Decide on one aspect of functionality
+4. Implement Tests
+5. Implement Code
+[Code Utopia](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob)
+
 ---
 ####Testing Best Practices:
 +++
@@ -72,4 +83,7 @@ public void completeMeritBadge_completedAndScoutMasterSet {
 +++
   #####Design from the outside in. Design based on need.
 ---
+####Where do we go from here?
++++
+![Image-Absolute](https://cdn.meme.am/cache/instances/folder949/54571949.jpg)
 
