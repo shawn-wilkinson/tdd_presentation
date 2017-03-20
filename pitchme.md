@@ -1,6 +1,14 @@
-#VSLIDE
-What Is TDD?
-  -TDD is continual testing, coding, design and documentation.
+## Test Driven Development
+#### Introduction & Application
+
+###What Is TDD?
+####TDD is continual testing, coding, design and documentation.
+####In a nutshell:
+  1. Write a test.
+  2. Run all tests. The test should fail.
+  3. Write the minimum amount of code to pass the test.
+  4. Run all tests. They should pass.
+  5. Refactor your code - optional.
 
 #VSLIDE
 Why Do We Use TDD?
@@ -8,12 +16,48 @@ Why Do We Use TDD?
 #HSLIDE
 Red, Green & Refactor
 
-#VSLIDE
-Red
-  -Test the behavior
-  -As few assertions as possible to capture the behavior
-  -Why a test passes should be obvious
-  -Expressive Code > DRY Code (in tests)
+####Testing Best Practices:
+  -Test the behavior.
+  -As few assertions as possible to capture the behavior.
++++
+  -Extract repetitive or distracting code to setup/helpers.
+```Java
+// Java Code Block
+@Test
+public void completeMeritBadge_completedAndScoutMasterSet {
+  Scout scout = new Scout();
+  ScoutMaster scoutMaster = new ScoutMaster();
+  MeritBadge meritBadge = MeritBadge.builder().name("Knots").build();
+  doReturn(scoutMaster).when(mockBadgeService).getSupervisingScoutMaster();
+
+  subject.completeMeritBadge(scout, meritBadge);
+
+  assertThat(meritBadge.completed()).isTrue();
+  assertThat(meritBadge.supervisingScoutMaster()).isEqualTo(scoutMaster);
+}
+```
++++
+  -Why a test passes should be obvious.
+  ```Java
+  // Java Code Block
+  @Test
+  public void completeMeritBadge_completedAndScoutMasterSet {
+    Scout scout = new Scout();
+    ScoutMaster scoutMaster = new ScoutMaster();
+    MeritBadge meritBadge = MeritBadge.builder().name("Knots").build();
+    doReturn(scoutMaster).when(mockBadgeService).getSupervisingScoutMaster();
+
+    subject.completeMeritBadge(scout, meritBadge);
+
+    assertThat(meritBadge.completed()).isTrue();
+    assertThat(meritBadge.supervisingScoutMaster()).isEqualTo(scoutMaster);
+  }
+  ```
++++
+  -Expressive code is better than DRY code.
+  -If you can't come up with a succinct test name, the the subject method might need to be broken down.
+  -Never skimp on refactoring. TDD without refactoring is a mess.
+  -Design from the outside in. Design based on need.
 
 #HSLIDE
 Green
