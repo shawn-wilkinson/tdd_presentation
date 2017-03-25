@@ -1,6 +1,12 @@
 ## Test Driven Development
 #### Introduction & Application
 ---
+#####What am I talking about?
+-(Briefly) What is TDD and why do we do it?
+-The hardest part: getting started.
+-Tips and best practices
+-Resources and opportunites for moving forward...
+---
 ###What Is TDD?
 ####More than "writing tests first"...
 +++
@@ -24,66 +30,116 @@ Why Do We Use TDD?
 TDD is continual testing, coding, design and documentation.
 ---
 ####The Hard Part
-#####Testing something that doesn't exist
+#####Testing functionality that doesn't exist yet
 ![Image-Relative](http://media1.iterated-reality.com/2015/03/ChickenOrEgg.jpg)
 +++
+#####The Basic Steps:
 1. Inputs and Outputs
 2. Function Signature
 3. Decide on one aspect of functionality
 4. Implement Tests
 5. Implement Code
-[Code Utopia](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob)
 
----
-####Testing Best Practices:
+[Code Utopia](https://codeutopia.net/blog/2016/10/10/5-step-method-to-make-test-driven-development-and-unit-testing-easy/)
 +++
-  #####Test the behavior.
+#####Example Problem:
+Build a function that determines if a username has valid formatting.
+-Length?
+-Special Characters?
+-Duplication?
 +++
-  #####As few assertions as possible to capture the behavior.
-+++
-  #####Extract repetitive or distracting code to setup/helpers.
-```Java
-// Java Code Block
-@Test
-public void completeMeritBadge_completedAndScoutMasterSet {
-  Scout scout = new Scout();
-  ScoutMaster scoutMaster = new ScoutMaster();
-  MeritBadge meritBadge = MeritBadge.builder().name("Knots").build();
-  doReturn(scoutMaster).when(mockBadgeService).getSupervisingScoutMaster();
-
-  subject.completeMeritBadge(scout, meritBadge);
-
-  assertThat(meritBadge.completed()).isTrue();
-  assertThat(meritBadge.supervisingScoutMaster()).isEqualTo(scoutMaster);
+#####1. Inputs and Outputs
+Input: username
+Output: boolean
+#####2. Function Signature
+I think it will look something like this:
+```Java 
+Public Boolean isValidUsername(String username){
+  ...code things go here...
 }
 ```
 +++
-  #####Why a test passes should be obvious.
-  ```Java
-  // Java Code Block
+#####3. Isolate one aspect of functionality
+Behavior: Blank usernames are considered invalid.
+#####4.Implement Tests
+```Java
   @Test
-  public void completeMeritBadge_completedAndScoutMasterSet {
-    Scout scout = new Scout();
-    ScoutMaster scoutMaster = new ScoutMaster();
-    MeritBadge meritBadge = MeritBadge.builder().name("Knots").build();
-    doReturn(scoutMaster).when(mockBadgeService).getSupervisingScoutMaster();
-
-    subject.completeMeritBadge(scout, meritBadge);
-
-    assertThat(meritBadge.completed()).isTrue();
-    assertThat(meritBadge.supervisingScoutMaster()).isEqualTo(scoutMaster);
+  public void isValidUsername_blankUsername_returnsFalse{
+    Boolean isValid = isValidUsername("");
+    assertThat(isValid).isEqualTo(false);
   }
-  ```
+```
 +++
-  #####Expressive code is better than DRY code.
+#####5b. Implement Code
+```Java
+Public boolean isValidUsername(String username){
+  return !username.isEmpty();
+}
+```
 +++
-  #####If you can't come up with a succinct test name, the the subject method might need to be broken down.
+######Let's add more...
+#####3b. Isolate one aspect of functionality
+Behavior: Usernames under six characters are considered invalid.
 +++
-  #####Never skimp on refactoring. TDD without refactoring is a mess.
+#####4b.Implement Tests
+```Java
+  @Test
+  public void isValidUsername_overSixChars_returnsTrue{
+    Boolean isValid = isValidUsername("Savy");
+    assertThat(isValid).isEqualTo(false);
+  }
+```
 +++
-  #####Design from the outside in. Design based on need.
+#####4b cont...
+```Java
+  @Test
+  public void isValidUsername_overSixChars_returnsTrue{
+    Boolean isValid = isValidUsername("eaglescout1776");
+    assertThat(isValid).isEqualTo(true);
+  }
+```
++++
+#####4b cont...
+```Java
+  @Test
+  public void isValidUsername_sixChars_returnsTrue{
+    Boolean isValid = isValidUsername("Oberon");
+    assertThat(isValid).isEqualTo(true);
+  }
+```
++++
+#####5b. Implement Code
+```Java
+Public boolean isValidUsername(String username){
+  return username.length() > = 6;
+}
+```
+---
+####Testing Best Practices:
+  1. Test the behavior.
+  
+  2. Design from the outside in. Design based on need.
+  
+  3. If you can't come up with a succinct test name, the the subject method might need to be broken down.
++++
+####Testing Best Practices:
+  4. As few assertions as possible to capture the behavior.
+  
+  5. Extract repetitive or distracting code to setup/helpers.
+  
+  6. Why a test passes should be obvious.
++++
+####Testing Best Practices:
+  4. Expressive code is better than DRY code.
+  
+  5. Never skimp on refactoring. TDD without refactoring is a mess.
 ---
 ####Where do we go from here?
+How do we become better practicioners of TDD?
+
 +++
+####Resources:
+
+
 ![Image-Absolute](https://cdn.meme.am/cache/instances/folder949/54571949.jpg)
 
