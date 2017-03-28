@@ -2,13 +2,14 @@
 #### Introduction & Application
 ---
 #####What am I talking about?
--(Briefly) What is TDD and why do we do it?
--The hardest part: getting started.
--Tips and best practices
--Resources and opportunites for moving forward...
+-(Briefly) What is TDD and why do we do it?\n
+-The hardest part: getting started.\n
+-Tips and best practices\n
+-Discussion: how do we move forward?
 ---
 ###What Is TDD?
-####More than "writing tests first"...
+####More than "writing tests first"...\n
+TDD is continual testing, coding, design and documentation.
 +++
 ####In a nutshell:
   1. Write a test.
@@ -26,8 +27,12 @@
 3. You can't write more production code than is sufficient to pass the currently failing unit test<br>
 [Credit to Robert C. Martin](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob)
 ---
-Why Do We Use TDD?
-TDD is continual testing, coding, design and documentation.
+####Why Do We Use TDD?
+1. Code is written to specification.
+2. Tests serve as documentation for the intention behind the subject.
+3. We can push up with confidence.
+4. Tests promote refactoring and more maintainable code.
+4. Will you *really* get around to writing those tests later?
 ---
 ####The Hard Part
 #####Testing functionality that doesn't exist yet
@@ -134,12 +139,11 @@ Public boolean isValidUsername(String username){
   
   5. Never skimp on refactoring. TDD without refactoring is a mess.
 ---
-####Where do we go from here?
-How do we become better practicioners of TDD?
-
-+++
+####TDD can be hard. How do we get better?
+  - How do we practice TDD as a team?
+  - What do we do well?
+  - What are opportunites for improvement? (Action Items!)
+---
 ####Resources:
 
-
-![Image-Absolute](https://cdn.meme.am/cache/instances/folder949/54571949.jpg)
 
