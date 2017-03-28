@@ -1,14 +1,15 @@
 ## Test Driven Development
 #### Introduction & Application
 ---
-#####What am I talking about?
--(Briefly) What is TDD and why do we do it?\n
--The hardest part: getting started.\n
--Tips and best practices\n
+#####What am I talking about?<br>
+-(Briefly) What is TDD and why do we do it?<br>
+-The hardest part: getting started<br>
+-Tips and best practices<br>
 -Discussion: how do we move forward?
 ---
 ###What Is TDD?
-####More than "writing tests first"...\n
+
+####More than "writing tests first"...<br>
 TDD is continual testing, coding, design and documentation.
 +++
 ####In a nutshell:
@@ -48,15 +49,15 @@ TDD is continual testing, coding, design and documentation.
 [Code Utopia](https://codeutopia.net/blog/2016/10/10/5-step-method-to-make-test-driven-development-and-unit-testing-easy/)
 +++
 #####Example Problem:
-Build a function that determines if a username has valid formatting.
--Length?
--Special Characters?
--Duplication?
+####Build a function that determines if a username has valid formatting.<br>
+-Length?<br>
+-Special Characters?<br>
+-Duplication?<br>
 +++
-#####1. Inputs and Outputs
-Input: username
-Output: boolean
-#####2. Function Signature
+#####1. Inputs and Outputs<br>
+Input: username<br>
+Output: boolean<br>
+#####2. Function Signature<br>
 I think it will look something like this:
 ```Java 
 Public Boolean isValidUsername(String username){
@@ -83,7 +84,7 @@ Public boolean isValidUsername(String username){
 ```
 +++
 ######Let's add more...
-#####3b. Isolate one aspect of functionality
+#####3b. Isolate one aspect of functionality<br>
 Behavior: Usernames under six characters are considered invalid.
 +++
 #####4b.Implement Tests
@@ -140,8 +141,8 @@ Public boolean isValidUsername(String username){
   5. Never skimp on refactoring. TDD without refactoring is a mess.
 ---
 ####TDD can be hard. How do we get better?
-  - How do we practice TDD as a team?
-  - What do we do well?
+  - How do we practice TDD as a team?<br>
+  - What do we do well?<br>
   - What are opportunites for improvement? (Action Items!)
 ---
 ####Resources:
