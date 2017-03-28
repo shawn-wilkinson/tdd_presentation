@@ -40,7 +40,7 @@ TDD is continual testing, coding, design and documentation.
 ####Why Do We Use TDD?
 4. Tests promote refactoring and more maintainable code.
 
-4. Will you *really* get around to writing those tests later?
+5. Will you *really* get around to writing those tests later?
 ---
 ####The Hard Part
 #####Testing functionality that doesn't exist yet
@@ -55,12 +55,15 @@ TDD is continual testing, coding, design and documentation.
 
 [Code Utopia](https://codeutopia.net/blog/2016/10/10/5-step-method-to-make-test-driven-development-and-unit-testing-easy/)
 +++
+<div style="text-align: left">
 #####Example Problem:
 ####Build a function that determines if a username has valid formatting.<br>
 -Length?<br>
 -Special Characters?<br>
 -Duplication?<br>
+</div>
 +++
+<div style="text-align: left">
 #####1. Inputs and Outputs<br>
 Input: username<br>
 Output: boolean<br>
@@ -71,7 +74,9 @@ Public Boolean isValidUsername(String username){
   ...code things go here...
 }
 ```
+</div>
 +++
+<div style="text-align: left">
 #####3. Isolate one aspect of functionality
 Behavior: Blank usernames are considered invalid.
 #####4.Implement Tests
@@ -82,18 +87,24 @@ Behavior: Blank usernames are considered invalid.
     assertThat(isValid).isEqualTo(false);
   }
 ```
+</div>
 +++
+<div style="text-align: left">
 #####5b. Implement Code
 ```Java
 Public boolean isValidUsername(String username){
   return !username.isEmpty();
 }
 ```
+</div>
 +++
+<div style="text-align: left">
 ######Let's add more...
 #####3b. Isolate one aspect of functionality<br>
 Behavior: Usernames under six characters are considered invalid.
+</div>
 +++
+<div style="text-align: left">
 #####4b.Implement Tests
 ```Java
   @Test
@@ -102,7 +113,9 @@ Behavior: Usernames under six characters are considered invalid.
     assertThat(isValid).isEqualTo(false);
   }
 ```
+</div>
 +++
+<div style="text-align: left">
 #####4b cont...
 ```Java
   @Test
@@ -111,7 +124,9 @@ Behavior: Usernames under six characters are considered invalid.
     assertThat(isValid).isEqualTo(true);
   }
 ```
+</div>
 +++
+<div style="text-align: left">
 #####4b cont...
 ```Java
   @Test
@@ -120,13 +135,16 @@ Behavior: Usernames under six characters are considered invalid.
     assertThat(isValid).isEqualTo(true);
   }
 ```
+</div>
 +++
+<div style="text-align: left">
 #####5b. Implement Code
 ```Java
 Public boolean isValidUsername(String username){
   return username.length() > = 6;
 }
 ```
+</div>
 ---
 ####Testing Best Practices:
   1. Test the behavior.
