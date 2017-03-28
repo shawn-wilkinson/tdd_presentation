@@ -83,7 +83,7 @@ Behavior: Blank usernames are considered invalid.
   }
 ```
 +++
-#####5b. Implement Code
+#####5. Implement Code
 ```Java
 Public boolean isValidUsername(String username){
   return !username.isEmpty();
