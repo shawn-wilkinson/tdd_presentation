@@ -1,7 +1,7 @@
 ## Test Driven Development
 #### Introduction & Application
 ---
-#####What am I talking about?<br>
+#####Overview:<br>
 <div style="text-align: left">
 -(Briefly) What is TDD and why do we do it?<br>
 -The hardest part: getting started<br>
@@ -147,7 +147,7 @@ Public boolean isValidUsername(String username){
   
   8. Never skimp on refactoring. TDD without refactoring is a mess.
 ---
-####TDD can be hard. How do we get better?
+####Moving Forward
   - How do we practice TDD as a team?<br>
   - What do we do well?<br>
   - What are opportunites for improvement? (Action Items!)
