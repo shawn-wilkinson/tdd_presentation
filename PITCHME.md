@@ -151,7 +151,5 @@ Public boolean isValidUsername(String username){
   - How do we practice TDD as a team?<br>
   - What do we do well?<br>
   - What are opportunites for improvement? (Action Items!)
----
-####Resources:
 
 
