@@ -2,10 +2,12 @@
 #### Introduction & Application
 ---
 #####What am I talking about?<br>
+<div style="text-align: left">
 -(Briefly) What is TDD and why do we do it?<br>
 -The hardest part: getting started<br>
 -Tips and best practices<br>
 -Discussion: how do we move forward?
+</div>
 ---
 ###What Is TDD?
 
@@ -30,9 +32,14 @@ TDD is continual testing, coding, design and documentation.
 ---
 ####Why Do We Use TDD?
 1. Code is written to specification.
+
 2. Tests serve as documentation for the intention behind the subject.
+
 3. We can push up with confidence.
++++
+####Why Do We Use TDD?
 4. Tests promote refactoring and more maintainable code.
+
 4. Will you *really* get around to writing those tests later?
 ---
 ####The Hard Part
@@ -136,9 +143,9 @@ Public boolean isValidUsername(String username){
   6. Why a test passes should be obvious.
 +++
 ####Testing Best Practices:
-  4. Expressive code is better than DRY code.
+  7. Expressive code is better than DRY code.
   
-  5. Never skimp on refactoring. TDD without refactoring is a mess.
+  8. Never skimp on refactoring. TDD without refactoring is a mess.
 ---
 ####TDD can be hard. How do we get better?
   - How do we practice TDD as a team?<br>
