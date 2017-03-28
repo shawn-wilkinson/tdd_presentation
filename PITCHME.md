@@ -150,6 +150,6 @@ Public boolean isValidUsername(String username){
 ####Moving Forward
   - How do we practice TDD as a team?<br>
   - What do we do well?<br>
-  - What are opportunites for improvement? (Action Items!)
+  - What are opportunites? (Action Items!)
 
 
