@@ -38,9 +38,11 @@ TDD is continual testing, coding, design and documentation.
 3. We can push up with confidence.
 +++
 ####Why Do We Use TDD?
-4. Tests promote refactoring and more maintainable code.
+4. There is less duplication.
 
-5. Will you *really* get around to writing those tests later?
+5. Tests promote refactoring and more maintainable code.
+
+6. Will you *really* get around to writing those tests later?
 ---
 ####The Hard Part
 #####Testing functionality that doesn't exist yet
