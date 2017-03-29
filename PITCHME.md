@@ -2,12 +2,10 @@
 
 ---
 #####Overview:<br>
-<div style="text-align: left">
 -What is TDD and why do we do it?<br>
 -The hardest part: getting started<br>
 -Tips and best practices<br>
 -Discussion: how do we move forward?
-</div>
 ---
 ##What Is TDD?
 
