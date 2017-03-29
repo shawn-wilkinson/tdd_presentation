@@ -155,6 +155,7 @@ Public boolean isValidUsername(String username){
   8. Never skimp on refactoring. TDD without refactoring is a mess.
 ---
 ###Moving Forward
+  - Cooperative TDD workshop?
   - How do we practice TDD as a team?<br>
   - What do we do well?<br>
   - What are opportunites? (Action Items!)
