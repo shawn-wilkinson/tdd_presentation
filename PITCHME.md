@@ -3,7 +3,7 @@
 ---
 #####Overview:<br>
 <div style="text-align: left">
--(Briefly) What is TDD and why do we do it?<br>
+-What is TDD and why do we do it?<br>
 -The hardest part: getting started<br>
 -Tips and best practices<br>
 -Discussion: how do we move forward?
@@ -64,12 +64,12 @@ TDD is continual testing, coding, design and documentation.
 -Duplication?<br>
 +++
 #####1. Inputs and Outputs<br>
-Input: username<br>
-Output: boolean<br>
+Input: username, string<br>
+Output: valid/invalid, boolean<br>
 #####2. Function Signature<br>
 I think it will look something like this:
 ```Java 
-Public Boolean isValidUsername(String username){
+Public boolean isValidUsername(String username){
   ...code things go here...
 }
 ```
@@ -82,6 +82,11 @@ Behavior: Blank usernames are considered invalid.
   public void isValidUsername_blankUsername_returnsFalse{
     Boolean isValid = isValidUsername("");
     assertThat(isValid).isEqualTo(false);
+  }
+   @Test
+  public void isValidUsername_nonBlank_returnsTrue{
+    Boolean isValid = isValidUsername("testUsername");
+    assertThat(isValid).isEqualTo(true);
   }
 ```
 +++
@@ -99,7 +104,7 @@ Behavior: Usernames under six characters are considered invalid.
 #####4b.Implement Tests
 ```Java
   @Test
-  public void isValidUsername_overSixChars_returnsTrue{
+  public void isValidUsername_underSixChars_returnsTrue{
     Boolean isValid = isValidUsername("Savy");
     assertThat(isValid).isEqualTo(false);
   }
@@ -117,7 +122,7 @@ Behavior: Usernames under six characters are considered invalid.
 #####4b cont...
 ```Java
   @Test
-  public void isValidUsername_sixChars_returnsTrue{
+  public void isValidUsername_exactlySixChars_returnsTrue{
     Boolean isValid = isValidUsername("Oberon");
     assertThat(isValid).isEqualTo(true);
   }
@@ -126,12 +131,12 @@ Behavior: Usernames under six characters are considered invalid.
 #####5b. Implement Code
 ```Java
 Public boolean isValidUsername(String username){
-  return username.length() > = 6;
+  return username.length() >= 6;
 }
 ```
 ---
 ####Testing Best Practices:
-  1. Test the behavior.
+  1. Test the behavior (not implementation).
   
   2. Design from the outside in. Design based on need.
   
