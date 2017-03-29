@@ -1,5 +1,5 @@
 ## Test Driven Development
-#### Introduction & Application
+
 ---
 #####Overview:<br>
 <div style="text-align: left">
@@ -9,9 +9,9 @@
 -Discussion: how do we move forward?
 </div>
 ---
-###What Is TDD?
+##What Is TDD?
 
-####More than "writing tests first"...<br>
+###More than "writing tests first"...<br>
 TDD is continual testing, coding, design and documentation.
 +++
 ####In a nutshell:
@@ -24,31 +24,31 @@ TDD is continual testing, coding, design and documentation.
 +++
 ![Image-Absolute](https://s3.amazonaws.com/media-p.slid.es/uploads/jlopezmo/images/587930/tdd-circle-of-life.png)
 +++
-####Uncle Bob's Three Laws of TDD:<br>
+###Uncle Bob's Three Laws of TDD:<br>
 1. You can't write any production code until you have first written a failing unit test.<br>
 2. You can't write more of a unit test than is sufficient to fail, and not compiling is failing.<br>
 3. You can't write more production code than is sufficient to pass the currently failing unit test<br>
 [Credit to Robert C. Martin](http://programmer.97things.oreilly.com/wiki/index.php/Uncle_Bob)
 ---
-####Why Do We Use TDD?
+###Why Do We Use TDD?
 1. Code is written to specification.
 
 2. Tests serve as documentation for the intention behind the subject.
 
 3. We can push up with confidence.
 +++
-####Why Do We Use TDD?
+###Why Do We Use TDD?
 4. There is less duplication.
 
 5. Tests promote refactoring and more maintainable code.
 
 6. Will you *really* get around to writing those tests later?
 ---
-####The Hard Part
-#####Testing functionality that doesn't exist yet
+###The Hard Part
+####Testing functionality that doesn't exist yet
 ![Image-Relative](http://media1.iterated-reality.com/2015/03/ChickenOrEgg.jpg)
 +++
-#####The Basic Steps:
+####The Basic Steps:
 1. Inputs and Outputs
 2. Function Signature
 3. Decide on one aspect of functionality
@@ -57,16 +57,16 @@ TDD is continual testing, coding, design and documentation.
 
 [Code Utopia](https://codeutopia.net/blog/2016/10/10/5-step-method-to-make-test-driven-development-and-unit-testing-easy/)
 +++
-#####Example Problem:
-####Build a function that determines if a username has valid formatting.<br>
+####Example Problem:
+#####Build a function that determines if a username has valid formatting.<br>
 -Length?<br>
 -Special Characters?<br>
 -Duplication?<br>
 +++
-#####1. Inputs and Outputs<br>
+####1. Inputs and Outputs<br>
 Input: username, string<br>
 Output: valid/invalid, boolean<br>
-#####2. Function Signature<br>
+####2. Function Signature<br>
 I think it will look something like this:
 ```Java 
 Public boolean isValidUsername(String username){
@@ -74,9 +74,9 @@ Public boolean isValidUsername(String username){
 }
 ```
 +++
-#####3. Isolate one aspect of functionality
+####3. Isolate one aspect of functionality
 Behavior: Blank usernames are considered invalid.
-#####4.Implement Tests
+####4.Implement Tests
 ```Java
   @Test
   public void isValidUsername_blankUsername_returnsFalse{
@@ -90,18 +90,18 @@ Behavior: Blank usernames are considered invalid.
   }
 ```
 +++
-#####5. Implement Code
+####5. Implement Code
 ```Java
 Public boolean isValidUsername(String username){
   return !username.isEmpty();
 }
 ```
 +++
-######Let's add more...
-#####3b. Isolate one aspect of functionality<br>
+#####Let's add more...
+####3b. Isolate one aspect of functionality<br>
 Behavior: Usernames under six characters are considered invalid.
 +++
-#####4b.Implement Tests
+####4b.Implement Tests
 ```Java
   @Test
   public void isValidUsername_underSixChars_returnsTrue{
@@ -110,7 +110,7 @@ Behavior: Usernames under six characters are considered invalid.
   }
 ```
 +++
-#####4b cont...
+####4b cont...
 ```Java
   @Test
   public void isValidUsername_overSixChars_returnsTrue{
@@ -119,7 +119,7 @@ Behavior: Usernames under six characters are considered invalid.
   }
 ```
 +++
-#####4b cont...
+####4b cont...
 ```Java
   @Test
   public void isValidUsername_exactlySixChars_returnsTrue{
@@ -128,33 +128,33 @@ Behavior: Usernames under six characters are considered invalid.
   }
 ```
 +++
-#####5b. Implement Code
+####5b. Implement Code
 ```Java
 Public boolean isValidUsername(String username){
   return username.length() >= 6;
 }
 ```
 ---
-####Testing Best Practices:
+###Testing Best Practices:
   1. Test the behavior (not implementation).
   
   2. Design from the outside in. Design based on need.
   
   3. If you can't come up with a succinct test name, the the subject method might need to be broken down.
 +++
-####Testing Best Practices:
+###Testing Best Practices:
   4. As few assertions as possible to capture the behavior.
   
   5. Extract repetitive or distracting code to setup/helpers.
   
   6. Why a test passes should be obvious.
 +++
-####Testing Best Practices:
+###Testing Best Practices:
   7. Expressive code is better than DRY code.
   
   8. Never skimp on refactoring. TDD without refactoring is a mess.
 ---
-####Moving Forward
+###Moving Forward
   - How do we practice TDD as a team?<br>
   - What do we do well?<br>
   - What are opportunites? (Action Items!)
